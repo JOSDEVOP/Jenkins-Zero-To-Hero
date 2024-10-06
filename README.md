@@ -34,6 +34,27 @@ sudo apt update
 sudo apt install openjdk-17-jre
 ```
 
+```
+sudo curl https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_linux-x64_bin.tar.gz --output /opt/openjdk-20_linux-x64_bin.tar.gz
+
+To uncompress run sudo tar -xf /opt/openjdk-20_linux-x64_bin.tar.gz -C /opt/
+
+To verify run /opt/jdk-20/bin/java -version on app01 and confirm correct
+
+
+```
+2. Manually Downloaded Packages (via wget, curl, browser)
+When you manually download a package (e.g., .deb, .rpm, .tar.gz), the default directory depends on where you choose to save the file.
+
+Web Browser: Typically downloads go to the user's Downloads folder:
+/home/username/Downloads/
+Command-line Tools (e.g., wget, curl): The file is saved to the directory from which you ran the command. You can also specify a target directory using -O or --output:
+If run from /home/username, the file will be saved there unless specified otherwise.
+If you're saving it to /opt, you need to specify the full path in the wget or curl command, e.g., --output /opt/file.tar.gz.
+
+```
+
+```
 Verify Java is Installed
 
 ```
